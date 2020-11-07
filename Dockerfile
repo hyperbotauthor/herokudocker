@@ -2,6 +2,6 @@ FROM node:15
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm rebuild
 
 COPY server.js ./
