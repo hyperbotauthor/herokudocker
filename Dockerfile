@@ -3,6 +3,7 @@ FROM node:12
 RUN apt-get update -y
 RUN apt-get install libopenblas-base -y
 RUN apt-get install libstdc++6 -y
+RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test 
 RUN apt-get update
 RUN apt-get upgrade
