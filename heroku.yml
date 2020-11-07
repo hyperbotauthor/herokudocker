@@ -2,7 +2,7 @@ build:
   docker:
     web: Dockerfile
 run:
-  worker:
+  web:
     command:
       - node server.js
     image: web
