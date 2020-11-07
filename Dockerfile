@@ -1,10 +1,9 @@
-FROM node:15
+FROM node:12
 
 COPY package*.json ./
 
 RUN npm cache clean --force
-RUN rm -r node_modules
 
-RUN npm rebuild
+RUN npm install
 
 COPY server.js ./
