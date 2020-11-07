@@ -1,6 +1,4 @@
-FROM alpine:3.10
-
-ENV NODE_VERSION 15.1.0
+FROM node:15
 
 COPY package*.json ./
 
