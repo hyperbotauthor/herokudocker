@@ -1,5 +1,8 @@
 build:
   docker:
-    web: Dockerfile
+    worker: Dockerfile
 run:
-  worker: node server.js
+  worker:
+    command:
+      - node server.js
+    image: worker
