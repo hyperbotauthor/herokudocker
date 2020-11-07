@@ -5,8 +5,9 @@ RUN apt-get install libopenblas-base -y
 RUN apt-get install libstdc++6 -y
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test 
-RUN apt-get upgrade
-RUN apt-get dist-upgrade
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get dist-upgrade -y
 
 COPY package*.json ./
 
