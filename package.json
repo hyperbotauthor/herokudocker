@@ -1,0 +1,24 @@
+{
+  "name": "herokudocker",
+  "version": "1.0.0",
+  "description": "heroku docker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyperbotauthor/herokudocker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyperbotauthor/herokudocker/issues"
+  },
+  "homepage": "https://github.com/hyperbotauthor/herokudocker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
