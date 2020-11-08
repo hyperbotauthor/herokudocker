@@ -6,11 +6,23 @@ apt-get install curl -y
 apt-get install sudo -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
+echo "install nodejs"
+sudo apt-get install nodejs -y
+
+echo "install yarn"
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install yarn
+
 echo "install git"
 sudo apt-get install git -y
 
 echo "clone lila"
 git clone --recursive https://github.com/ornicar/lila.git
+
+chmod +x ui/build
+./ui/build
 
 echo "install sbt"
 sudo apt-get upgrade -y
