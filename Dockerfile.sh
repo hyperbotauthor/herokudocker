@@ -23,10 +23,9 @@ git clone --recursive https://github.com/ornicar/lila.git
 
 cd lila
 
+echo "ui build"
 chmod +x ui/build
 ./ui/build
-
-exit 1
 
 echo "install sbt"
 sudo apt-get upgrade -y
@@ -39,8 +38,8 @@ curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89
 sudo apt-get update -y
 sudo apt-get install sbt -y
 
+echo "lila compile"
 chmod +x lila
-
 ./lila compile
 
 echo "install mongodb"
@@ -52,4 +51,5 @@ sudo apt update
 sudo apt install redis-server
 redis-server &
 
+echo "lila run"
 ./lila run
