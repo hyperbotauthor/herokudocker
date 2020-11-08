@@ -21,8 +21,12 @@ sudo apt-get install git -y
 echo "clone lila"
 git clone --recursive https://github.com/ornicar/lila.git
 
+cd lila
+
 chmod +x ui/build
 ./ui/build
+
+exit 1
 
 echo "install sbt"
 sudo apt-get upgrade -y
@@ -35,7 +39,17 @@ curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89
 sudo apt-get update -y
 sudo apt-get install sbt -y
 
-cd lila
 chmod +x lila
 
 ./lila compile
+
+echo "install mongodb"
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && (echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list) && apt-get update && apt-get install -y mongodb-org && mkdir -p /data/db
+mongod &
+
+echo "install redis"
+sudo apt update
+sudo apt install redis-server
+redis-server &
+
+./lila run
