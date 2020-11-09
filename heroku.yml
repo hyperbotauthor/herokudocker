@@ -3,7 +3,6 @@ build:
     web: Dockerfile
 run:
   web:
-    command:
-      #- node server.js
+    command:      
       - mongod & ; redis-server & ; cd lila ; chmod +x lila ; ./lila run
     image: web
