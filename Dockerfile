@@ -1,5 +1,5 @@
-FROM ubuntu:18.04
+FROM hyperbotauthor/herokudocker:latest
 
-COPY . ./
+RUN node -v
 
-RUN ./Dockerfile.sh
+RUN node server.js
