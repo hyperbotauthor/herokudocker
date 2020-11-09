@@ -1,5 +1,6 @@
-FROM hyperbotauthor/herokudocker:latest
+#FROM hyperbotauthor/herokudocker:latest
+FROM hyperbotauthor/lila:latest
 
-COPY . .
+#COPY . .
 
-RUN sudo yarn install
+#RUN sudo yarn install
