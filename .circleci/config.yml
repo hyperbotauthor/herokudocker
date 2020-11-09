@@ -14,7 +14,7 @@ jobs:
           name: Push to DockerHub
           command: |
             docker login -u hyperbotauthor -p $DOCKERHUB_PASSWORD
-            docker push hyperbotauthor/herokudocker#circleci:$CIRCLE_SHA1
+            docker push hyperbotauthor/herokudocker:$CIRCLE_SHA1
 
 workflows:
   version: 2
