@@ -1,5 +1,5 @@
-FROM hyperbotauthor/herokudocker:latest
+FROM ubuntu:18.04
 
 COPY . .
 
-RUN sudo yarn install
+RUN ./Dockerfile.sh
