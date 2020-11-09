@@ -4,4 +4,4 @@ COPY . .
 
 RUN node -v
 
-RUN sudo npm install
+RUN sudo yarn install
