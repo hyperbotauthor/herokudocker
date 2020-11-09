@@ -14,3 +14,7 @@ sudo apt-get update -y
 sudo apt-get install -y mongodb-org
 mongo --version
 #mongod &
+
+echo "install redis"
+sudo apt-get update -y
+sudo apt-get install redis-server -y
