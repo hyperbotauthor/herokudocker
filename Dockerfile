@@ -4,6 +4,6 @@ COPY . .
 
 RUN node -v
 
-RUN npm install -g npm
+RUN sudo npm install -g npm
 
-RUN npm install
+RUN sudo npm install
