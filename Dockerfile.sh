@@ -17,9 +17,5 @@ sudo apt-get update -y
 sudo apt-get install -y mongodb-org
 mongo --version
 
-mongod &
-
 sudo apt-get update -y
-sudo apt-get install redis-server -y ; redis-server &
-
-cd lila ; chmod +x lila ; ./lila run
+sudo apt-get install redis-server -y ; exit 0
