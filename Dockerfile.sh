@@ -2,7 +2,7 @@ echo "configure tzdata"
 export TZ=Europe/Kiev
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-echot "install wget"
+echo "install wget"
 sudo apt-get install wget -y
 
 echo "install mongodb"
@@ -17,4 +17,5 @@ mongo --version
 
 echo "install redis"
 sudo apt-get update -y
+sudo apt-get install -y apt-utils
 sudo apt-get install redis-server -y
