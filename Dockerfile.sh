@@ -21,9 +21,10 @@ mongod &
 
 echo "install redis"
 sudo apt-get update -y
-sudo apt-get install redis-server -y; exit 0
+#sudo apt-get install redis-server -y
 
-redis-server &
+#redis-server &
 
 cd lila
 ./lila run
+
