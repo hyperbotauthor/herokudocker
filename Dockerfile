@@ -1,3 +1,3 @@
-FROM hyperbotauthor/lila:latest
+FROM ubuntu:18.04
 
-COPY startserver.sh ./
+RUN bash Dockerfile.sh
