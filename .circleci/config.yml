@@ -9,7 +9,7 @@ jobs:
       - run:
          name: Build Docker image
          command: docker build -t hyperbotauthor/lc0 .
-		 
+
       - run:
           name: Push to DockerHub
           command: |
