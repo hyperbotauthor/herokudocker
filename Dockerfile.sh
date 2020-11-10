@@ -4,6 +4,13 @@ apt-get install curl -y
 apt-get install sudo -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
+echo "install python"
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt-get update -y
+sudo apt-get install python3.8 -y
+python ––version
+
 echo "install gcc"
 sudo apt-get install build-essential -y
 gcc --version
@@ -20,4 +27,5 @@ cd lc0
 git clone https://github.com/mesonbuild/meson.git meson
 sed -i 's/meson /meson\/meson.py /g' build.sh
 cat build.sh
+
 ./build.sh
