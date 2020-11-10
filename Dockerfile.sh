@@ -4,6 +4,10 @@ apt-get install curl -y
 apt-get install sudo -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
+echo "install gcc"
+sudo apt-get install build-essential -y
+gcc --version
+
 echo "install git"
 sudo apt-get install git -y
 
