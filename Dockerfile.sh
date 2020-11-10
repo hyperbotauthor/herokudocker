@@ -35,4 +35,4 @@ sed -i 's/meson /meson\/meson.py /g' build.sh
 PATH = $PATH:~/.local/bin
 CC=clang-6.0 CXX=clang++-6.0 INSTALL_PREFIX=~/.local ./build.sh
 
-echo "uci" | lc0/build/release/lc0
+echo "uci" | build/release/lc0
