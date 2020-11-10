@@ -4,6 +4,9 @@ apt-get install curl -y
 apt-get install sudo -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
+echo "install git"
+sudo apt-get install git -y
+
 echo "install lc0"
 sudo apt-get update -y
 sudo apt-get install -y ninja-build
@@ -12,4 +15,5 @@ git clone -b release/0.23 --recurse-submodules https://github.com/LeelaChessZero
 cd lc0
 git clone https://github.com/mesonbuild/meson.git meson
 sed -i 's/meson /meson\/meson.py /g' build.sh
+cat build.sh
 ./build.sh
