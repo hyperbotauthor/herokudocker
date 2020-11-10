@@ -9,6 +9,8 @@ sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt-get update -y
 sudo apt-get install python3.8 -y
+sudo apt-get update -y
+sudo apt-get install python2.7 -y
 echo "python version"
 python3 ––version
 
